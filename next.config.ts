@@ -34,8 +34,6 @@ const nextConfig: NextConfig = {
         env: { NEXT_PUBLIC_BASE_PATH: basePath },
       }
     : {
-        cacheComponents: true,
-        partialPrefetching: true,
         ...(onVercel ? {} : { output: "standalone" as const }),
         images: {
           formats: ["image/avif", "image/webp"] as ("image/avif" | "image/webp")[],
