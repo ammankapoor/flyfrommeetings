@@ -19,13 +19,13 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const githubPages = process.env.GITHUB_PAGES === "true";
-const basePath = githubPages ? "/flyfrommeetings" : "";
+const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/$/, "");
 
 const nextConfig: NextConfig = {
   ...(githubPages
     ? {
         output: "export" as const,
-        basePath,
+        ...(basePath ? { basePath } : {}),
         trailingSlash: true,
         images: { unoptimized: true },
         env: { NEXT_PUBLIC_BASE_PATH: basePath },

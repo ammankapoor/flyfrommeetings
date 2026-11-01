@@ -35,8 +35,8 @@ jobs:
         env:
           GITHUB_PAGES: "true"
           NEXT_TELEMETRY_DISABLED: "1"
-          NEXT_PUBLIC_SITE_URL: https://ammankapoor.github.io/flyfrommeetings
-          NEXT_PUBLIC_BASE_PATH: /flyfrommeetings
+          NEXT_PUBLIC_SITE_URL: https://flyfrommeetings.com
+          NEXT_PUBLIC_BASE_PATH: ""
           NEXT_PUBLIC_ALLOW_INDEXING: "true"
 
       - name: Upload Pages artifact
