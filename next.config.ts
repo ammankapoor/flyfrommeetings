@@ -19,7 +19,10 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const githubPages = process.env.GITHUB_PAGES === "true";
-const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/$/, "");
+const onVercel = process.env.VERCEL === "1";
+const basePath = (
+  process.env.NEXT_PUBLIC_BASE_PATH ?? (githubPages ? "/flyfrommeetings" : "")
+).replace(/\/$/, "");
 
 const nextConfig: NextConfig = {
   ...(githubPages
@@ -33,7 +36,7 @@ const nextConfig: NextConfig = {
     : {
         cacheComponents: true,
         partialPrefetching: true,
-        output: "standalone" as const,
+        ...(onVercel ? {} : { output: "standalone" as const }),
         images: {
           formats: ["image/avif", "image/webp"] as ("image/avif" | "image/webp")[],
         },
