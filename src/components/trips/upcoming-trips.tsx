@@ -6,7 +6,12 @@ import { GroupDrops } from "@/components/trips/group-drops";
 
 export function UpcomingTrips({ padForHeader = false }: { padForHeader?: boolean }) {
   return (
-    <div id="trips" className={padForHeader ? "scroll-mt-8 bg-[#0c2744] pt-24" : "scroll-mt-28 bg-[#0c2744]"}>
+    <div
+      id="trips"
+      className={
+        padForHeader ? "scroll-mt-8 bg-[#0c2744] pt-24" : "scroll-mt-28 bg-[#0c2744]"
+      }
+    >
       <section className="px-6 pt-14 pb-8 text-center text-[#f3eee4]">
         <h2 className="font-display text-[clamp(3.2rem,7vw,5.6rem)] leading-[0.9] font-light tracking-[-0.03em] italic">
           Upcoming

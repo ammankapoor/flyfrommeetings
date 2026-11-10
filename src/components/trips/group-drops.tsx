@@ -83,8 +83,22 @@ function PeopleIcon() {
 function CalendarIcon() {
   return (
     <svg viewBox="0 0 24 24" className="size-5" aria-hidden="true">
-      <rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" strokeWidth="1.6" />
-      <path d="M8 3.5v3M16 3.5v3M4 9.5h16" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <rect
+        x="4"
+        y="5"
+        width="16"
+        height="15"
+        rx="3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M8 3.5v3M16 3.5v3M4 9.5h16"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
     </svg>
   );
 }
@@ -130,7 +144,9 @@ export function GroupDrops() {
                 {filter.id === "all" ? (
                   <span
                     className={`grid size-5 place-items-center rounded-full text-[11px] ${
-                      active ? "bg-[#10243a] text-[#e0b85c]" : "bg-[#e0b85c]/15 text-[#e0b85c]"
+                      active
+                        ? "bg-[#10243a] text-[#e0b85c]"
+                        : "bg-[#e0b85c]/15 text-[#e0b85c]"
                     }`}
                   >
                     {trips.length}
@@ -203,7 +219,9 @@ export function GroupDrops() {
                     <span className="block text-[10px] font-semibold tracking-[0.16em] text-[#e0b85c] uppercase">
                       Per person
                     </span>
-                    <span className="mt-1 block text-3xl font-bold tracking-tight">₹{trip.price}</span>
+                    <span className="mt-1 block text-3xl font-bold tracking-tight">
+                      ₹{trip.price}
+                    </span>
                   </p>
                   <a
                     href={trip.enquire}

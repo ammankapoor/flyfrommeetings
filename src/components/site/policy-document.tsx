@@ -58,11 +58,16 @@ export function PolicyDocument({ policy }: { policy: Policy }) {
         {policy.intro ? (
           <p className="mt-6 text-lg leading-relaxed text-black">{policy.intro}</p>
         ) : null}
-        {policy.updated ? <p className="mt-4 text-sm tracking-wide text-black">{policy.updated}</p> : null}
+        {policy.updated ? (
+          <p className="mt-4 text-sm tracking-wide text-black">{policy.updated}</p>
+        ) : null}
 
         <div className="mt-10 space-y-4">
           {policy.sections.map((section, index) => (
-            <section key={section.title} className="rounded-3xl border border-black/10 bg-[#ffffff] px-5 py-6 text-black sm:px-7">
+            <section
+              key={section.title}
+              className="rounded-3xl border border-black/10 bg-[#ffffff] px-5 py-6 text-black sm:px-7"
+            >
               <h2 className="flex items-baseline gap-3 font-display text-2xl font-light tracking-tight text-black italic sm:text-3xl">
                 <span className="text-base font-semibold tracking-[0.14em] text-black not-italic">
                   {String(index + 1).padStart(2, "0")}
@@ -73,7 +78,10 @@ export function PolicyDocument({ policy }: { policy: Policy }) {
                 <ul className="mt-4 space-y-3">
                   {section.list.map((item) => (
                     <li key={item} className="flex gap-3 leading-relaxed text-black">
-                      <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-black" />
+                      <span
+                        aria-hidden="true"
+                        className="mt-2 size-1.5 shrink-0 rounded-full bg-black"
+                      />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -82,7 +90,10 @@ export function PolicyDocument({ policy }: { policy: Policy }) {
               {section.table ? (
                 <div className="mt-5 space-y-3">
                   {section.table.rows.map((row) => (
-                    <div key={row.when} className="rounded-2xl border border-black/10 bg-[#ffffff] px-4 py-4 text-black">
+                    <div
+                      key={row.when}
+                      className="rounded-2xl border border-black/10 bg-[#ffffff] px-4 py-4 text-black"
+                    >
                       <p className="text-xs font-semibold tracking-[0.16em] text-black uppercase">
                         {row.when}
                       </p>
@@ -95,11 +106,16 @@ export function PolicyDocument({ policy }: { policy: Policy }) {
               {section.facts ? (
                 <dl className="mt-5 grid gap-3 sm:grid-cols-2">
                   {section.facts.map((fact) => (
-                    <div key={fact.label} className="rounded-2xl border border-black/10 bg-[#ffffff] px-4 py-3 text-black">
+                    <div
+                      key={fact.label}
+                      className="rounded-2xl border border-black/10 bg-[#ffffff] px-4 py-3 text-black"
+                    >
                       <dt className="text-xs font-semibold tracking-[0.16em] text-black uppercase">
                         {fact.label}
                       </dt>
-                      <dd className="mt-1 text-base font-semibold tracking-wide">{fact.value}</dd>
+                      <dd className="mt-1 text-base font-semibold tracking-wide">
+                        {fact.value}
+                      </dd>
                     </div>
                   ))}
                 </dl>

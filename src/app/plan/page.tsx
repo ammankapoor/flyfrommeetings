@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { PlanInquiry } from "@/app/plan/plan-inquiry";
 import { Container } from "@/components/site/container";
 import { PageIntro } from "@/components/site/page-intro";
@@ -19,7 +20,9 @@ export default function PlanPage() {
         </p>
       </PageIntro>
       <div className="border border-line bg-sand p-5 sm:p-8">
-        <PlanInquiry />
+        <Suspense>
+          <PlanInquiry />
+        </Suspense>
       </div>
     </Container>
   );

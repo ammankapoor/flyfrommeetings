@@ -15,7 +15,14 @@ function InstagramIcon() {
         stroke="currentColor"
         strokeWidth="1.6"
       />
-      <circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <circle
+        cx="12"
+        cy="12"
+        r="3.4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
       <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" />
     </svg>
   );
@@ -37,47 +44,55 @@ export function FilmFooter() {
     <footer className="border-t border-[#e0b85c]/20 bg-[#081c33] text-[#f3eee4]">
       <div className="mx-auto w-full max-w-6xl px-6 py-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between md:gap-10">
-        <Link href="/" aria-label="flyFromMeetings home" className="inline-block shrink-0">
-          <img src={publicPath("/brand/logo-film.png")} alt="" className="h-20 w-auto" />
-        </Link>
-
-        <nav aria-label="Policies" className="md:flex-1">
-          <ul className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-[#f3eee4]/85 md:justify-center">
-            {policyLinks.map((item, index) => (
-              <li key={item.href} className="flex items-center gap-3">
-                {index > 0 ? (
-                  <span aria-hidden="true" className="text-[#f3eee4]/35">
-                    |
-                  </span>
-                ) : null}
-                <Link href={item.href} className="hover:text-[#e0b85c]">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <a
-            href={site.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="grid size-10 place-items-center rounded-full border border-[#f3eee4]/70 text-[#f3eee4] hover:border-[#e0b85c] hover:text-[#e0b85c]"
+          <Link
+            href="/"
+            aria-label="flyFromMeetings home"
+            className="inline-block shrink-0"
           >
-            <InstagramIcon />
-          </a>
-          <a
-            href="https://wa.me/919990766054"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chat on WhatsApp"
-            className="grid size-10 place-items-center rounded-full border border-[#f3eee4]/70 text-[#f3eee4] hover:border-[#e0b85c] hover:text-[#e0b85c]"
-          >
-            <WhatsAppIcon />
-          </a>
-        </div>
+            <img
+              src={publicPath("/brand/logo-film.png")}
+              alt=""
+              className="h-20 w-auto"
+            />
+          </Link>
+
+          <nav aria-label="Policies" className="md:flex-1">
+            <ul className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-[#f3eee4]/85 md:justify-center">
+              {policyLinks.map((item, index) => (
+                <li key={item.href} className="flex items-center gap-3">
+                  {index > 0 ? (
+                    <span aria-hidden="true" className="text-[#f3eee4]/35">
+                      |
+                    </span>
+                  ) : null}
+                  <Link href={item.href} className="hover:text-[#e0b85c]">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <a
+              href={site.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="grid size-10 place-items-center rounded-full border border-[#f3eee4]/70 text-[#f3eee4] hover:border-[#e0b85c] hover:text-[#e0b85c]"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href="https://wa.me/919990766054"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="grid size-10 place-items-center rounded-full border border-[#f3eee4]/70 text-[#f3eee4] hover:border-[#e0b85c] hover:text-[#e0b85c]"
+            >
+              <WhatsAppIcon />
+            </a>
+          </div>
         </div>
         <p className="mt-3 text-xs tracking-wide text-[#f3eee4]/70">
           © 2026 Fly From Meetings. All Rights Reserved.

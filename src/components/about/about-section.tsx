@@ -27,7 +27,9 @@ export function AboutSection() {
   return (
     <section id="about" className="scroll-mt-32 bg-[#0c2744] text-[#f3eee4]">
       <div className="px-6 pt-14 pb-10 text-center">
-        <p className="text-xs font-semibold tracking-[0.22em] text-[#e0b85c] uppercase">About us</p>
+        <p className="text-xs font-semibold tracking-[0.22em] text-[#e0b85c] uppercase">
+          About us
+        </p>
         <h2 className="mx-auto mt-4 max-w-4xl font-display text-[clamp(3rem,7vw,5.4rem)] leading-[0.92] font-light tracking-[-0.03em] italic">
           Behind Fly From Meetings
         </h2>
@@ -50,18 +52,18 @@ export function AboutSection() {
         <div className="space-y-5 text-base leading-relaxed text-[#f3eee4]/85 sm:text-lg">
           <p>
             Behind Fly From Meetings are Sumit Bangia and Meenu Bharti, a{" "}
-            <span className="whitespace-nowrap">husband-and-wife</span> duo
-            with over a decade of experience in Human Resources and a shared love for travel.
+            <span className="whitespace-nowrap">husband-and-wife</span> duo with over a
+            decade of experience in Human Resources and a shared love for travel.
           </p>
           <p>
-            While balancing corporate careers and busy schedules, we’ve explored ten countries in
-            just 24 months, discovering new cultures, unforgettable places, and the value of
-            travelling smart.
+            While balancing corporate careers and busy schedules, we’ve explored ten
+            countries in just 24 months, discovering new cultures, unforgettable places,
+            and the value of travelling smart.
           </p>
           <blockquote className="border-l-2 border-[#e0b85c] pl-5 text-[#f3eee4]">
             <p className="font-display text-2xl leading-snug font-light italic sm:text-3xl">
-              You don’t need unlimited time or an extravagant budget to explore the world. You
-              just need to plan it right.
+              You don’t need unlimited time or an extravagant budget to explore the
+              world. You just need to plan it right.
             </p>
           </blockquote>
         </div>
@@ -77,15 +79,17 @@ export function AboutSection() {
           </h2>
           <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-[#f3eee4]/85 sm:text-lg">
             <p>
-              Between meetings, deadlines, and limited leaves, travel became our escape from
-              everyday routines.
+              Between meetings, deadlines, and limited leaves, travel became our escape
+              from everyday routines.
             </p>
             <p>
-              That’s what inspired Fly From Meetings, to help others explore more through
-              thoughtful planning, comfortable stays, and experiences worth remembering.
+              That’s what inspired Fly From Meetings, to help others explore more
+              through thoughtful planning, comfortable stays, and experiences worth
+              remembering.
             </p>
             <p className="text-[#f3eee4]">
-              Because the life you work hard for should also be a life you get to experience.
+              Because the life you work hard for should also be a life you get to
+              experience.
             </p>
           </div>
         </div>
@@ -129,7 +133,8 @@ export function AboutSection() {
             Travel Beyond Meetings.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[#f3eee4]/85 sm:text-lg">
-            Your calendar may be full of meetings, but your life deserves more destinations.
+            Your calendar may be full of meetings, but your life deserves more
+            destinations.
           </p>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#f3eee4] sm:text-lg">
             Because there’s a whole world waiting beyond your calendar.
@@ -167,7 +172,12 @@ function GemIcon() {
         strokeLinejoin="round"
         d="M4 9.5 8 4h8l4 5.5L12 20 4 9.5Z"
       />
-      <path fill="none" stroke="currentColor" strokeWidth="1.6" d="M4 9.5h16M8 4l4 16 4-16" />
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        d="M4 9.5h16M8 4l4 16 4-16"
+      />
     </svg>
   );
 }

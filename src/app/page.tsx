@@ -24,7 +24,11 @@ export default function HomePage() {
             className="pointer-events-auto inline-flex flex-col items-center gap-2 text-sm font-semibold tracking-[0.22em] text-paper uppercase no-underline"
           >
             Explore trips
-            <svg viewBox="0 0 24 24" className="explore-arrow size-6" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              className="explore-arrow size-6"
+              aria-hidden="true"
+            >
               <path
                 d="M6 9l6 6 6-6"
                 fill="none"

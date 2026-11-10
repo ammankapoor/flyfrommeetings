@@ -197,7 +197,8 @@ export const cancellationPolicy: PolicyDocument = {
 export const paymentPolicy: PolicyDocument = {
   eyebrow: "Policies",
   title: "Payment Terms",
-  description: "Booking amounts, payment schedule, and bank details for Fly From Meetings.",
+  description:
+    "Booking amounts, payment schedule, and bank details for Fly From Meetings.",
   intro:
     "A booking amount of Rs. 10,000 per person secures your seat and is adjusted against the package price.",
   sections: [

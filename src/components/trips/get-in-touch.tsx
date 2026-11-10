@@ -40,7 +40,11 @@ function InstagramIcon() {
 
 function Chevron() {
   return (
-    <svg viewBox="0 0 24 24" className="size-5 shrink-0 text-[#c4a056]" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      className="size-5 shrink-0 text-[#c4a056]"
+      aria-hidden="true"
+    >
       <path
         d="M9 6l6 6-6 6"
         fill="none"
@@ -75,7 +79,9 @@ function Card({
       </span>
       <span className="min-w-0 flex-1">
         <span className="block text-base font-semibold">{title}</span>
-        <span className="mt-0.5 block text-sm leading-snug text-[#10243a]/70">{detail}</span>
+        <span className="mt-0.5 block text-sm leading-snug text-[#10243a]/70">
+          {detail}
+        </span>
       </span>
       <Chevron />
     </>
@@ -106,13 +112,17 @@ function Card({
 
 export function GetInTouch() {
   return (
-    <section id="contact" className="scroll-mt-28 bg-[#0c2744] px-6 pt-10 pb-14 text-[#f3eee4]">
+    <section
+      id="contact"
+      className="scroll-mt-28 bg-[#0c2744] px-6 pt-10 pb-14 text-[#f3eee4]"
+    >
       <div className="mx-auto w-full max-w-5xl">
         <h2 className="font-display text-[clamp(2.6rem,6vw,4.2rem)] leading-[0.95] font-light tracking-[-0.03em] italic">
           Get in <span className="text-[#e0b85c]">Touch</span>
         </h2>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-[#f3eee4]/75 sm:text-lg">
-          Have a question, collaboration idea or general enquiry? We&apos;d love to hear from you.
+          Have a question, collaboration idea or general enquiry? We&apos;d love to hear
+          from you.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <Card
