@@ -18,12 +18,17 @@ export const policyLinks = [
 ] as const;
 
 export function isFilmPath(pathname: string) {
-  return pathname === "/" || pathname === "/trips" || policyLinks.some((item) => item.href === pathname);
+  return (
+    pathname === "/" ||
+    pathname === "/trips" ||
+    policyLinks.some((item) => item.href === pathname)
+  );
 }
 
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/#trips", label: "Trips" },
+  { href: "/#about", label: "About Us" },
   { href: "/#contact", label: "Contact Us" },
 ] as const;
 

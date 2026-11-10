@@ -117,7 +117,7 @@ export function SiteHeader() {
   const onFilm = isFilmPath(pathname);
   const item = (href: NavHref) => navItems.find((entry) => entry.href === href)!;
   const leftItems = [item("/"), item("/#trips")];
-  const rightItems = [item("/#contact")];
+  const rightItems = [item("/#about"), item("/#contact")];
 
   function onNavigate(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
     followNav(event, href);

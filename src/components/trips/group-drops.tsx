@@ -5,32 +5,50 @@ import { publicPath } from "@/lib/site-url";
 
 type Group = "all" | "girls" | "couples";
 
-const trips = [
+type Trip = {
+  id: string;
+  group: Exclude<Group, "all">;
+  badge: string;
+  note?: string;
+  title: string;
+  duration: string;
+  dates?: string;
+  stay: string;
+  price: string;
+  enquire: string;
+  image: string;
+  imageAlt: string;
+};
+
+const trips: Trip[] = [
   {
     id: "maasai-mara-girls",
     group: "girls" as const,
     badge: "All Girls Group",
     title: "Maasai Mara",
     duration: "5 Days | 4 Nights",
-    stay: "All Girls (Triple Sharing)",
+    dates: "5-9th Feb",
+    stay: "All Girls",
     price: "1,25,000",
     enquire:
       "https://wa.me/919990766054?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Maasai%20Mara%20All%20Girls%20trip.",
     image: publicPath("/media/trips/maasai-mara-girls.jpg"),
-    imageAlt: "Safari vehicle in grassland at sunset",
+    imageAlt: "Women on an all-girls safari beside an open vehicle",
   },
   {
     id: "maasai-mara-couples",
     group: "couples" as const,
     badge: "Couples Group",
+    note: "Valentines special",
     title: "Maasai Mara",
     duration: "5 Days | 4 Nights",
-    stay: "Couples Only (Double Sharing)",
+    dates: "10-14th Feb",
+    stay: "Couples Only",
     price: "1,21,000",
     enquire:
       "https://wa.me/919990766054?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20the%20Maasai%20Mara%20Couples%20trip.",
     image: publicPath("/media/trips/maasai-mara-couples.jpg"),
-    imageAlt: "Two elephants on open grassland at sunset",
+    imageAlt: "Desert dinner under a canopy beside a close-up of a lion",
   },
 ];
 
@@ -129,8 +147,12 @@ export function GroupDrops() {
               key={trip.id}
               className="overflow-hidden rounded-[28px] border border-[#e0b85c]/25 bg-[#123352]"
             >
-              <div className="relative h-72">
-                <img src={trip.image} alt={trip.imageAlt} className="h-full w-full object-cover" />
+              <div className="relative h-72 bg-[#0c2744]">
+                <img
+                  src={trip.image}
+                  alt={trip.imageAlt}
+                  className={`h-full w-full ${trip.id === "maasai-mara-couples" ? "object-contain" : "object-cover"}`}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c2744]/90 via-[#0c2744]/10 to-[#0c2744]/25" />
                 <span
                   className={`absolute top-4 left-4 rounded-full px-3 py-1 text-xs font-semibold ${
@@ -141,11 +163,25 @@ export function GroupDrops() {
                 >
                   {trip.badge}
                 </span>
+                {trip.note ? (
+                  <span className="absolute top-4 right-4 rounded-full bg-[#c41230] px-3 py-1 text-xs font-semibold text-white">
+                    {trip.note}
+                  </span>
+                ) : null}
                 <h2 className="absolute right-5 bottom-4 left-5 text-4xl font-bold tracking-tight">
                   {trip.title}
                 </h2>
               </div>
               <div className="space-y-4 p-4 sm:p-5">
+                {trip.dates ? (
+                  <div className="rounded-2xl bg-[#0c2744] px-3 py-3">
+                    <p className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.16em] text-[#e0b85c] uppercase">
+                      <CalendarIcon />
+                      Dates
+                    </p>
+                    <p className="mt-2 text-sm font-semibold">{trip.dates}</p>
+                  </div>
+                ) : null}
                 <div className="grid grid-cols-2 gap-3">
                   <div className="rounded-2xl bg-[#0c2744] px-3 py-3">
                     <p className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.16em] text-[#e0b85c] uppercase">

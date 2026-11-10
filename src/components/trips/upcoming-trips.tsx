@@ -1,3 +1,4 @@
+import { AboutSection } from "@/components/about/about-section";
 import { FilmFooter } from "@/components/site/film-footer";
 import { FutureDrops } from "@/components/trips/future-drops";
 import { GetInTouch } from "@/components/trips/get-in-touch";
@@ -17,6 +18,7 @@ export function UpcomingTrips({ padForHeader = false }: { padForHeader?: boolean
       </section>
       <GroupDrops />
       <FutureDrops />
+      <AboutSection />
       <div className="px-6" aria-hidden="true">
         <hr className="mx-auto w-full max-w-5xl border-0 border-t border-white" />
       </div>

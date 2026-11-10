@@ -7,7 +7,6 @@ describe("indexablePaths", () => {
     expect(paths).toEqual(
       expect.arrayContaining([
         "/",
-        "/about",
         "/trips",
         "/plan",
         "/contact",
