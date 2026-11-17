@@ -17,6 +17,12 @@ export const policyLinks = [
   { href: "/payment-policy", label: "Payment Policy" },
 ] as const;
 
+export function isBarePath(pathname: string) {
+  return (
+    pathname === "/great-kenya-safari" || pathname.startsWith("/great-kenya-safari/")
+  );
+}
+
 export function isFilmPath(pathname: string) {
   return (
     pathname === "/" ||
