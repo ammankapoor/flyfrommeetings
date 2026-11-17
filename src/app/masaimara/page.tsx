@@ -102,7 +102,7 @@ const lodges = [
     meta: "Lake Naivasha • 1 Night",
     body: "Peaceful lakeside resort with roaming zebras and lush lawns.",
     image: "/media/kenya/lodge-simba.jpg",
-    imageAlt: "A thatched safari lodge set among trees",
+    imageAlt: "Thatched rooms at Mara Simba Lodge among acacia trees",
     fit: "object-center",
   },
   {
