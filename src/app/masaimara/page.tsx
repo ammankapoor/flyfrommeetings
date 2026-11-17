@@ -22,24 +22,29 @@ const whatsapp = `https://wa.me/${phone.slice(1)}?text=${encodeURIComponent(
 
 const reasons = [
   {
+    title: "Personally Hosted by Us",
+    body: "Your hosts travel with you, so every detail of the journey is personally looked after.",
+    icon: "🤝",
+  },
+  {
     title: "4-Star Stays",
     body: "Handpicked luxury lodges and suites ensuring complete comfort in the wild.",
-    icon: "stay",
+    icon: "🏨",
   },
   {
     title: "4x4 Safari Vehicle",
     body: "Private pop-up-roof safari Land Cruiser with an expert English-speaking guide.",
-    icon: "jeep",
+    icon: "🚙",
   },
   {
     title: "Full Board Meals",
     body: "All breakfasts, lunches, and dinners included throughout your journey.",
-    icon: "meal",
+    icon: "🍽️",
   },
   {
     title: "All Entries Included",
     body: "Masai Mara game drives, park fees, boat rides, and village visits covered.",
-    icon: "ticket",
+    icon: "🎟️",
   },
 ] as const;
 
@@ -51,7 +56,7 @@ const days = [
     stay: "Simba Lodge, Lake Naivasha • Full Board",
     stayIcon: "bed",
     image: "/media/kenya/day-1.jpg",
-    imageAlt: "Hippos in the water lilies of Lake Naivasha",
+    imageAlt: "Zebras grazing on the Masai Mara plains",
   },
   {
     day: "Day 2",
@@ -60,7 +65,7 @@ const days = [
     stay: "Jambo Mara Safari Lodge • Full Board",
     stayIcon: "bed",
     image: "/media/kenya/day-2.jpg",
-    imageAlt: "An elephant on the open Kenyan savannah",
+    imageAlt: "A pop-up-roof safari vehicle at sunset on the plains",
   },
   {
     day: "Day 3",
@@ -69,7 +74,7 @@ const days = [
     stay: "Jambo Mara Safari Lodge • Full Board",
     stayIcon: "bed",
     image: "/media/kenya/day-3.jpg",
-    imageAlt: "A cheetah beside a safari vehicle in the Masai Mara",
+    imageAlt: "A male lion resting in the grass in the Masai Mara",
   },
   {
     day: "Day 4",
@@ -78,7 +83,7 @@ const days = [
     stay: "Lotos Suites, Nairobi • Full Board",
     stayIcon: "bed",
     image: "/media/kenya/day-4.jpg",
-    imageAlt: "A Rothschild's giraffe feeding at the Giraffe Centre in Nairobi",
+    imageAlt: "Maasai hosts in red shukas during a traditional jump",
   },
   {
     day: "Day 5",
@@ -87,7 +92,7 @@ const days = [
     stay: "Breakfast Included",
     stayIcon: "meal",
     image: "/media/kenya/day-5.jpg",
-    imageAlt: "A giraffe and an acacia tree at sunset on the savannah",
+    imageAlt: "A giraffe in Nairobi National Park with the city skyline behind",
   },
 ] as const;
 
@@ -97,23 +102,23 @@ const lodges = [
     meta: "Lake Naivasha • 1 Night",
     body: "Peaceful lakeside resort with roaming zebras and lush lawns.",
     image: "/media/kenya/lodge-simba.jpg",
-    imageAlt: "Hippos on Lake Naivasha, with the Rift Valley hills behind",
-    fit: "object-top",
+    imageAlt: "A thatched safari lodge set among trees",
+    fit: "object-center",
   },
   {
     name: "Jambo Mara Safari Lodge",
     meta: "Masai Mara • 2 Nights",
     body: "Authentic luxury safari lodge right in the heart of the reserve.",
     image: "/media/kenya/lodge-jambo.jpg",
-    imageAlt: "A safari lodge beside a river in the Masai Mara",
-    fit: "object-[78%_center]",
+    imageAlt: "A luxury lodge deck looking over the Masai Mara at sunset",
+    fit: "object-center",
   },
   {
     name: "Lotos Suites",
     meta: "Nairobi • 1 Night",
     body: "Sophisticated urban suites for a comfortable final evening.",
     image: "/media/kenya/lodge-lotos.jpg",
-    imageAlt: "A hotel suite bedroom",
+    imageAlt: "A sunlit suite with a wooden bench and garden windows",
     fit: "object-center",
   },
 ];
@@ -161,32 +166,33 @@ export default function GreatKenyaSafariPage() {
           alt=""
           className="absolute inset-0 h-full w-full object-cover object-[68%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#102818]/72 via-[#102818]/48 to-[#102818]/20" />
-        <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center px-5 py-16 sm:py-20">
-          <p className="rounded-full border border-[#e4c15a] bg-[#102818]/70 px-4 py-1.5 text-[11px] font-semibold tracking-[0.16em] text-[#e4c15a] uppercase">
+        <div className="absolute inset-0 bg-[#102818]/55" />
+        <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center px-5 py-12 sm:py-16">
+          <p className="rounded-full border border-[#e4c15a] bg-[#102818]/70 px-4 py-1 text-[11px] font-semibold tracking-[0.16em] text-[#e4c15a] uppercase">
             🐾 Masai Mara & Lake Naivasha
           </p>
           <h1
-            className={`${playfair.className} mt-6 text-[clamp(2.7rem,6vw,4.6rem)] leading-[0.95] font-bold text-white`}
+            className={`${playfair.className} mt-5 text-4xl leading-[1.05] font-bold text-white sm:text-5xl`}
           >
             Wild Heart of Kenya <span className="text-[#e4c15a] italic">Safari</span>
           </h1>
-          <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/90 sm:text-base">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-[15px]">
             Golden sunrises, elephants up close, and the colourful Maasai culture. Five
             days of Kenya&apos;s wild beauty. Personally hosted by us.
           </p>
-          <div className="mt-8 w-full max-w-sm rounded-2xl border border-[#e4c15a] bg-[#102818]/80 px-6 py-5">
+          <div className="mt-6 w-full max-w-sm rounded-2xl border border-[#e4c15a] bg-[#102818]/80 px-6 py-4">
             <p className="text-[11px] font-semibold tracking-[0.18em] text-[#e4c15a] uppercase">
               Starting investment
             </p>
-            <p className="mt-2 text-4xl font-bold text-white">
-              ₹1,21,000 <span className="text-base font-semibold">per person</span>
+            <p className="mt-1 text-3xl font-bold text-[#e4c15a] sm:text-4xl">
+              ₹1,21,000{" "}
+              <span className="text-sm font-semibold text-white">per person</span>
             </p>
             <p className="mt-1 text-xs text-white/75">
               on double sharing • +GST +TCS as applicable
             </p>
           </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
             <a
               href={whatsapp}
               target="_blank"
@@ -205,46 +211,64 @@ export default function GreatKenyaSafariPage() {
         </div>
       </section>
 
-      <section className="px-5 py-14">
-        <SectionLabel>Why Travel With Us</SectionLabel>
-        <ul className="mx-auto mt-8 grid w-full max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {reasons.map((reason) => (
-            <li
-              key={reason.title}
-              className="rounded-[24px] bg-[#fbf6ee] px-5 py-7 text-center shadow-sm"
-            >
-              <span className="mx-auto grid size-12 place-items-center rounded-full bg-[#163024] text-[#e4c15a]">
-                <ReasonIcon name={reason.icon} />
-              </span>
-              <h2 className="mt-4 text-lg font-bold">{reason.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-[#3d5346]">
-                {reason.body}
+      <section className="px-5 py-8">
+        <div className="mx-auto w-full max-w-5xl rounded-[28px] border border-[#e4c15a] bg-[#163024] px-5 py-8 text-center text-[#f7f3ea] sm:px-8">
+          <h2 className={`${playfair.className} text-2xl text-[#e4c15a] sm:text-3xl`}>
+            Upcoming 2027 Departures
+          </h2>
+          <p className="mt-2 text-sm text-white/80">
+            Secure your spot on our exclusive hosted wildlife departures.
+          </p>
+          <div className="mx-auto mt-6 grid max-w-3xl gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl bg-[#fbf6ee] px-4 py-4 text-[#163024]">
+              <p className="text-base font-bold">Girls Only Trip</p>
+              <p className="mt-1 text-sm font-semibold">5–9 February 2027</p>
+              <p className="mx-auto mt-3 inline-flex rounded-full bg-[#163024] px-3 py-1 text-[11px] font-semibold text-[#e4c15a]">
+                Limited: Only 6–8 girls
               </p>
-            </li>
-          ))}
-        </ul>
+            </div>
+            <div className="rounded-2xl bg-[#fbf6ee] px-4 py-4 text-[#163024]">
+              <p className="text-base font-bold">Couples / Mixed Group</p>
+              <p className="mt-1 text-sm font-semibold">10–14 February 2027</p>
+              <p className="mx-auto mt-3 inline-flex rounded-full bg-[#163024] px-3 py-1 text-[11px] font-semibold text-[#e4c15a]">
+                Limited: Group size max 8–10 people
+              </p>
+            </div>
+          </div>
+          <a
+            href={whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#3dce6e] px-5 py-2.5 text-sm font-semibold text-[#102818]"
+          >
+            <WhatsAppIcon /> Reserve via WhatsApp
+          </a>
+        </div>
       </section>
 
-      <section className="px-5 pb-14">
-        <SectionLabel>Your 5-Day Itinerary</SectionLabel>
+      <section className="px-5 pb-10">
+        <SectionLabel tone="dark">Your 5-Day Itinerary</SectionLabel>
         <ol className="mx-auto mt-8 w-full max-w-6xl space-y-2 rounded-[28px] bg-[#fbf6ee] px-4 py-6 shadow-sm sm:px-8">
           {days.map((day) => (
             <li
               key={day.day}
               className="grid items-center gap-4 border-b border-[#e7d3b4] py-5 last:border-b-0 md:grid-cols-[auto_1fr_220px]"
             >
-              <div className="grid size-16 place-items-center rounded-2xl bg-[#163024] text-center text-[#e4c15a]">
+              <div className="grid size-14 place-items-center rounded-2xl bg-[#163024] text-center text-[#e4c15a]">
                 <span className="text-[10px] font-bold tracking-wide uppercase">
                   {day.day.split(" ")[0]}
                 </span>
-                <span className="text-lg leading-none font-bold">
+                <span className="text-base leading-none font-bold">
                   {day.day.split(" ")[1]}
                 </span>
-                <PinIcon />
+                <span
+                  className="mt-1 size-1.5 rounded-full bg-[#c41230]"
+                  aria-hidden="true"
+                />
               </div>
               <div>
-                <h2 className="text-lg font-bold sm:text-xl">{day.title}</h2>
-                <p className="mt-2 text-sm leading-relaxed text-[#3d5346]">
+                <h2 className="text-base font-bold sm:text-lg">{day.title}</h2>
+                <p className="mt-1.5 text-xs leading-relaxed text-[#3d5346] sm:text-sm">
                   {day.body}
                 </p>
                 <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#f3e6cf] px-3 py-1 text-xs font-semibold">
@@ -254,7 +278,7 @@ export default function GreatKenyaSafariPage() {
               <img
                 src={publicPath(day.image)}
                 alt={day.imageAlt}
-                className="h-36 w-full rounded-2xl object-cover object-center md:h-32"
+                className="h-24 w-full rounded-2xl object-cover object-center md:h-28"
               />
             </li>
           ))}
@@ -273,11 +297,11 @@ export default function GreatKenyaSafariPage() {
                 <p className="tracking-[0.3em] text-[#c4a24a]" aria-hidden="true">
                   ★★★★
                 </p>
-                <h2 className="mt-2 text-xl font-bold">{lodge.name}</h2>
+                <h2 className="mt-1 text-lg font-bold">{lodge.name}</h2>
                 <p className="mx-auto mt-3 inline-flex rounded-full bg-[#163024] px-3 py-1 text-[10px] font-semibold tracking-[0.12em] text-[#f7f3ea] uppercase">
                   {lodge.meta}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-[#3d5346]">
+                <p className="mt-2 text-xs leading-relaxed text-[#3d5346] sm:text-sm">
                   {lodge.body}
                 </p>
               </div>
@@ -291,14 +315,14 @@ export default function GreatKenyaSafariPage() {
         </ul>
       </section>
 
-      <section className="px-5 pb-16">
-        <SectionLabel>Inclusions & Exclusions</SectionLabel>
+      <section className="px-5 pb-12">
+        <SectionLabel tone="dark">Inclusions & Exclusions</SectionLabel>
         <div className="mx-auto mt-8 grid w-full max-w-6xl gap-4 md:grid-cols-2">
           <article className="rounded-[24px] bg-[#fbf6ee] p-6 shadow-sm">
-            <h2 className="flex items-center gap-2 text-lg font-bold text-[#1f7a45]">
+            <h2 className="flex items-center gap-2 text-base font-bold text-[#1f7a45]">
               <span aria-hidden="true">✓</span> What&apos;s Included
             </h2>
-            <ul className="mt-4 space-y-3 text-sm">
+            <ul className="mt-3 space-y-2.5 text-xs sm:text-sm">
               {included.map((item) => (
                 <li
                   key={item}
@@ -313,10 +337,10 @@ export default function GreatKenyaSafariPage() {
             </ul>
           </article>
           <article className="rounded-[24px] bg-[#fbf6ee] p-6 shadow-sm">
-            <h2 className="flex items-center gap-2 text-lg font-bold text-[#b4332a]">
+            <h2 className="flex items-center gap-2 text-base font-bold text-[#b4332a]">
               <span aria-hidden="true">✕</span> What&apos;s Not Included
             </h2>
-            <ul className="mt-4 space-y-3 text-sm">
+            <ul className="mt-3 space-y-2.5 text-xs sm:text-sm">
               {excluded.map((item) => (
                 <li
                   key={item}
@@ -333,61 +357,44 @@ export default function GreatKenyaSafariPage() {
         </div>
       </section>
 
-      <section className="px-5 pb-16">
-        <div className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-[28px] border border-[#e4c15a]/70 bg-[#102818] px-5 py-12 text-center text-[#f7f3ea]">
-          <img
-            src={publicPath("/media/kenya/hero-lion.jpg")}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-[#102818]/75" />
-          <div className="relative">
-            <h2 className={`${playfair.className} text-4xl text-[#e4c15a] italic`}>
-              Upcoming 2027 Departures
-            </h2>
-            <p className="mt-3 text-sm text-white/80">
-              Secure your spot on our exclusive hosted wildlife departures.
-            </p>
-            <div className="mx-auto mt-8 grid max-w-3xl gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl bg-[#fbf6ee] px-4 py-5 text-[#163024]">
-                <p className="text-lg font-bold">Couples/Mixed group</p>
-                <p className="mt-1 text-sm">10–14 February 2027</p>
-                <p className="mx-auto mt-3 inline-flex rounded-full bg-[#163024] px-3 py-1 text-xs font-semibold text-[#e4c15a]">
-                  Limited: Group size max 8–10 people
-                </p>
-              </div>
-              <div className="rounded-2xl bg-[#fbf6ee] px-4 py-5 text-[#163024]">
-                <p className="text-lg font-bold">Girls Only Trip</p>
-                <p className="mt-1 text-sm">5–9 February 2027</p>
-                <p className="mx-auto mt-3 inline-flex rounded-full bg-[#163024] px-3 py-1 text-xs font-semibold text-[#e4c15a]">
-                  Limited: Only 6–8 girls
-                </p>
-              </div>
-            </div>
-            <a
-              href={whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#3dce6e] px-6 py-3 text-sm font-semibold text-[#102818]"
+      <section className="px-5 pb-12">
+        <SectionLabel>Why Travel With Us</SectionLabel>
+        <ul className="mx-auto mt-6 grid w-full max-w-6xl gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {reasons.map((reason) => (
+            <li
+              key={reason.title}
+              className="rounded-[22px] bg-[#fbf6ee] px-4 py-5 text-center shadow-sm"
             >
-              <WhatsAppIcon /> Reserve via WhatsApp
-            </a>
-          </div>
-        </div>
+              <span className="text-2xl" aria-hidden="true">
+                {reason.icon}
+              </span>
+              <h2 className="mt-2 text-sm font-bold">{reason.title}</h2>
+              <p className="mt-1.5 text-xs leading-relaxed text-[#3d5346]">
+                {reason.body}
+              </p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <footer className="border-t border-[#e4c15a] bg-[#102818] px-5 py-10 text-center text-[#f7f3ea]">
-        <p className={`${playfair.className} text-3xl text-[#e4c15a] italic`}>
+        <p
+          className={`${playfair.className} text-2xl text-[#e4c15a] italic sm:text-3xl`}
+        >
           Fly From Meetings
         </p>
-        <p className="mt-2 text-sm text-white/75">
+        <p className="mt-2 text-xs text-white/75 sm:text-sm">
           Travel Beyond Meetings • Crafted with care for unforgettable wildlife
           journeys.
         </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-[#7eb6ff]">
+          <a href="https://www.flyfrommeetings.com">🌐 www.flyfrommeetings.com</a>
+          <a href="https://www.instagram.com/flyfrommeetings">📷 @flyfrommeetings</a>
+        </div>
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           <a
             href={`tel:${phone}`}
-            className="inline-flex rounded-full bg-[#e4c15a] px-4 py-2 text-sm font-semibold text-[#102818]"
+            className="inline-flex rounded-full border border-[#e4c15a] px-4 py-2 text-sm font-semibold text-[#e4c15a]"
           >
             ☎ {phoneLabel}
           </a>
@@ -395,12 +402,12 @@ export default function GreatKenyaSafariPage() {
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[#e4c15a] px-4 py-2 text-sm font-semibold text-[#102818]"
+            className="inline-flex items-center gap-2 rounded-full border border-[#e4c15a] px-4 py-2 text-sm font-semibold text-[#e4c15a]"
           >
             <WhatsAppIcon /> Chat on WhatsApp
           </a>
         </div>
-        <p className="mt-8 border-t border-white/15 pt-4 text-xs text-white/55">
+        <p className="mt-6 text-[11px] text-white/55">
           © 2027 Fly From Meetings. All rights reserved.
         </p>
         <p className="mx-auto mt-2 max-w-xl text-[10px] leading-relaxed text-white/40">
@@ -412,10 +419,18 @@ export default function GreatKenyaSafariPage() {
   );
 }
 
-function SectionLabel({ children }: { children: string }) {
+function SectionLabel({
+  children,
+  tone = "gold",
+}: {
+  children: string;
+  tone?: "gold" | "dark";
+}) {
+  const toneClass =
+    tone === "dark" ? "bg-[#163024] text-[#f7f3ea]" : "bg-[#e4c15a] text-[#163024]";
   return (
     <h2
-      className={`${playfair.className} mx-auto w-fit rounded-xl bg-[#e4c15a] px-6 py-2 text-center text-2xl text-[#163024] italic sm:text-3xl`}
+      className={`${playfair.className} mx-auto w-fit rounded-full px-6 py-1.5 text-center text-xl italic ${toneClass}`}
     >
       {children}
     </h2>
@@ -429,55 +444,6 @@ function WhatsAppIcon() {
         fill="currentColor"
         d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.4a10 10 0 0 0 4.65 1.18h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2Zm5.76 14.15c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.14-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.16-1.54-1.16-2.94s.73-2.08 1-2.37c.24-.27.64-.4 1.02-.4.13 0 .24 0 .35.01.3.01.46-.1.72.55.27.68.92 2.35 1 2.52.08.17.14.37.03.58-.1.22-.16.35-.31.54-.16.19-.33.42-.47.56-.16.16-.32.33-.14.64.19.31.83 1.37 1.78 2.22 1.23 1.09 2.26 1.43 2.58 1.59.32.16.5.13.69-.08.19-.21.78-.9.99-1.21.21-.31.42-.26.7-.15.28.1 1.79.84 2.1.99.3.16.51.23.58.36.08.13.08.76-.16 1.44Z"
       />
-    </svg>
-  );
-}
-
-function PinIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="mt-0.5 size-3.5" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M12 2a6 6 0 0 0-6 6c0 4.5 6 12 6 12s6-7.5 6-12a6 6 0 0 0-6-6Zm0 8.2A2.2 2.2 0 1 1 14.2 8 2.2 2.2 0 0 1 12 10.2Z"
-      />
-    </svg>
-  );
-}
-
-function ReasonIcon({ name }: { name: "stay" | "jeep" | "meal" | "ticket" }) {
-  if (name === "jeep") {
-    return (
-      <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M4 15v2h2a2 2 0 1 0 4 0h4a2 2 0 1 0 4 0h1v-2l-1.2-4.2A2 2 0 0 0 15.9 9H13l-1.4-2.2A2 2 0 0 0 9.9 6H6.5A2.5 2.5 0 0 0 4 8.5V15Zm3.5-7H10l1 1.6V13H6V9.2c0-.7.5-1.2 1.2-1.2H7.5Z"
-        />
-      </svg>
-    );
-  }
-  if (name === "meal") {
-    return (
-      <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M6 3v8a2 2 0 0 0 2 2v8h2v-8a2 2 0 0 0 2-2V3h-2v6H9V3H7v6H6V3H6Zm10 0c-1.7 2.2-2 4.2-2 6.2 0 1.6.8 2.6 2 3.1V21h2V3h-2Z"
-        />
-      </svg>
-    );
-  }
-  if (name === "ticket") {
-    return (
-      <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 0 0-4V7Zm6 1.5v2h2v-2h-2Zm0 4.5v2h2v-2h-2Z"
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true">
-      <path fill="currentColor" d="M4 20V9l8-5 8 5v11h-6v-6H10v6H4Z" />
     </svg>
   );
 }
