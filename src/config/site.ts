@@ -18,9 +18,7 @@ export const policyLinks = [
 ] as const;
 
 export function isBarePath(pathname: string) {
-  return (
-    pathname === "/great-kenya-safari" || pathname.startsWith("/great-kenya-safari/")
-  );
+  return pathname === "/masaimara" || pathname.startsWith("/masaimara/");
 }
 
 export function isFilmPath(pathname: string) {

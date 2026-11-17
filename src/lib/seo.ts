@@ -10,7 +10,7 @@ const staticPaths = [
   "/terms",
   "/cancellation",
   "/payment-policy",
-  "/great-kenya-safari",
+  "/masaimara",
 ] as const;
 
 export function indexablePaths() {
