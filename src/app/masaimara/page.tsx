@@ -110,7 +110,7 @@ const lodges = [
     meta: "Masai Mara • 2 Nights",
     body: "Authentic luxury safari lodge right in the heart of the reserve.",
     image: "/media/kenya/lodge-jambo.jpg",
-    imageAlt: "A luxury lodge deck looking over the Masai Mara at sunset",
+    imageAlt: "A lit garden path between rooms at Jambo Mara Safari Lodge at dusk",
     fit: "object-center",
   },
   {
