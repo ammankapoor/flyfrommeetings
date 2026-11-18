@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Outfit } from "next/font/google";
+import { MetaPixel } from "@/components/analytics/meta-pixel";
 import { SiteShell } from "@/components/site/site-shell";
 import { allowIndexing, site } from "@/config/site";
 import { getSiteUrl } from "@/lib/site-url";
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${outfit.variable} ${fraunces.variable} h-full`}>
       <body className="flex min-h-full flex-col antialiased">
+        <MetaPixel />
         <a className="skip-link" href="#main">
           Skip to content
         </a>
